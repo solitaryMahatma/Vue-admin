@@ -61,6 +61,21 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/forget',
+    component: () => import('@/views/forget/index'),
+    hidden: true
+  },
+  {
+    path: '/reset',
+    component: () => import('@/views/reset/index'),
+    hidden: true
+  },
+  {
+    path: '/register',
+    component: () => import('@/views/register/index'),
+    hidden: true
+  },
+  {
     path: '/404',
     component: () => import('@/views/error-page/404'),
     hidden: true

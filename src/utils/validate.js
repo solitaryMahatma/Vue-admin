@@ -6,6 +6,8 @@
  * @param {string} path
  * @returns {Boolean}
  */
+const validator = require('validator')
+
 export function isExternal(path) {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
@@ -15,8 +17,9 @@ export function isExternal(path) {
  * @returns {Boolean}
  */
 export function validUsername(str) {
-  const valid_map = ['admin', 'editor']
-  return valid_map.indexOf(str.trim()) >= 0
+  // const valid_map = ['admin', 'editor']
+  // return valid_map.indexOf(str.trim()) >= 0
+  return validator.isLength(str, { max: 28, min: 5 })
 }
 
 /**
